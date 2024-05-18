@@ -14,7 +14,10 @@ Tools:
 ### 1. 
 
 List components
-
+- [] IAM users - IAM role - IAM policies - ...
+- [x] VPC - Subnets - Routetable - Internet Gateway - ...
+- [] Ec2 instane - Placement group - ENI - Instance Role - ....
+- 
 
 
 **Author: [Son Nguyen](https://www.linkedin.com/in/son-n-114539152/)**
