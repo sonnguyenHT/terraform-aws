@@ -28,8 +28,4 @@ jobs:
           tflint_version: v0.50.3
       # - run: echo ${{ github.workspace }}
       # - run: terraform fmt
-      - run:  |
-              sudo apt update -y
-              sudo apt install nodejs -y
-              ln -s /usr/bin/nodejs /usr/local/bin/node
       - uses: pre-commit/action@v3.0.1
