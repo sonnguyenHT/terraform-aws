@@ -4,20 +4,12 @@
 ## Prerequisites
 Tools:
 - awscli
-- Terraform
-- Terragrunt
-
-## Steps:
-
-### 0. Setup environment
-
-### 1. 
+- Terraform (Tofu)
 
 List components
 - [ ] IAM users - IAM role - IAM policies - ...
-- [x] VPC - Subnets - Routetable - Internet Gateway - ...
+- [x] VPC - Subnets - Routetable - Internet Gateway - Endpoints
 - [ ] Ec2 instane - Placement group - ENI - Instance Role - ....
-- 
-
+- [ ]
 
 **Author: [Son Nguyen](https://www.linkedin.com/in/son-n-114539152/)**
