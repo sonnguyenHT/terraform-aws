@@ -1,3 +1,3 @@
 output "test" {
-  value = module.vpc.public_subnets[0]
+  value = aws_iam_instance_profile.ec2_ssm_profile.arn
 }

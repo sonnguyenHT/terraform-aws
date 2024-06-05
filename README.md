@@ -6,10 +6,16 @@ Tools:
 - awscli
 - Terraform (Tofu)
 
-List components
-- [ ] IAM users - IAM role - IAM policies - ...
-- [x] VPC - Subnets - Routetable - Internet Gateway - Endpoints
-- [ ] Ec2 instane - Placement group - ENI - Instance Role - ....
-- [ ]
+## List components
+- [ ] IAM users - IAM role - IAM policies - Ec2 Instance profile ...
+- [x] VPC - Subnets - Routetable - Internet Gateway - Endpoints - NAT gateway ...
+- [ ] Ec2 instanes - Placement group - ENI - Instance Role - Launch template ...
+- [x] KMS
+- [ ] EFS
+
+# Pre commit run
+```
+pre-commit run -a
+```
 
 **Author: [Son Nguyen](https://www.linkedin.com/in/son-n-114539152/)**
