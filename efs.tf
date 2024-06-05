@@ -1,5 +1,6 @@
 module "efs" {
   source = "terraform-aws-modules/efs/aws"
+  version = "1.6.3"
 
   # File system
   name           = "example"
@@ -14,15 +15,15 @@ module "efs" {
   # provisioned_throughput_in_mibps = 256
 
   lifecycle_policy = {
-    transition_to_ia = "AFTER_30_DAYS"
-    transition_to_archive = "AFTER_90_DAYS"
+    transition_to_ia                    = "AFTER_30_DAYS"
+    transition_to_archive               = "AFTER_90_DAYS"
     transition_to_primary_storage_class = "AFTER_1_ACCESS"
   }
 
   # File system policy
   attach_policy                      = true
   bypass_policy_lockout_safety_check = false
-  deny_nonsecure_transport = true
+  deny_nonsecure_transport           = true
   policy_statements = [
     {
       sid     = "EFS policy"
@@ -40,7 +41,7 @@ module "efs" {
   mount_targets = {
     "ap-southeast-1a" = {
       subnet_id = module.vpc.private_subnets[0]
-    #   ip_address = ""
+      #   ip_address = ""
     }
     "ap-southeast-1b" = {
       subnet_id = module.vpc.private_subnets[1]
@@ -50,7 +51,7 @@ module "efs" {
     }
   }
   # security group
-  create_security_group = true
+  create_security_group      = true
   security_group_description = "EFS security group"
   security_group_vpc_id      = module.vpc.vpc_id
   security_group_rules = {
@@ -96,14 +97,14 @@ module "efs" {
     # }
   }
 
-#   # Backup policy
-#   enable_backup_policy = true
+  #   # Backup policy
+  #   enable_backup_policy = true
 
   # Replication configuration
-#   create_replication_configuration = true
-#   replication_configuration_destination = {
-#     region = "eu-west-2"
-#   }
+  #   create_replication_configuration = true
+  #   replication_configuration_destination = {
+  #     region = "eu-west-2"
+  #   }
 
   tags = {
     Terraform   = "true"
