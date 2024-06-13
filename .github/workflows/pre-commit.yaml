@@ -7,7 +7,10 @@ on:
   pull_request:
     branches:
       - main
-
+    paths-ignore:
+      - "README.md"
+      - "images/**"
+      - ".gitignore"
 jobs:
   # install python before running pre-commit
   preCommitValidation:
