@@ -12,6 +12,10 @@ Tools:
 - [x] Ec2 instanes - Placement group - ENI - Instance Role - Launch template ...
 - [x] KMS
 - [x] EFS
+- [ ] Load balancer
+
+## List Lab
+- [ ] PrivateLink: private connection to service between vpc
 
 # Pre commit run
 ```
