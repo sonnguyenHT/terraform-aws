@@ -8,9 +8,10 @@ on:
     branches:
       - main
     paths-ignore:
-      - "README.md"
-      - "images/**"
-      - ".gitignore"
+      - "**/README.md"
+      - "*.png"
+      - "**/.gitignore"
+      - ".github/**"
 jobs:
   # install python before running pre-commit
   preCommitValidation:
