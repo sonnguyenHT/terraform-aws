@@ -23,5 +23,3 @@ pre-commit run -a
 ```
 
 **Author: [Son Nguyen](https://www.linkedin.com/in/son-n-114539152/)**
-
-this is test commit
