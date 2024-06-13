@@ -11,9 +11,8 @@ on:
       - "**/README.md"
       - "*.png"
       - "**/.gitignore"
-      - ".github/**"
+      - "**/.github/**"
 jobs:
-  # install python before running pre-commit
   preCommitValidation:
     name: Pre Commit Validation
     runs-on: self-hosted
