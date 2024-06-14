@@ -1,0 +1,40 @@
+name: terraform-plan
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**/README.md"
+      - "*.png"
+      - "**/.gitignore"
+      - "**/.github/**"
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "**/README.md"
+      - "*.png"
+      - "**/.gitignore"
+      - "**/.github/**"
+jobs:
+  preCommitValidation:
+    name: Pre Commit Validation
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.8.3"
+      # Install AWS cli
+      - uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2.15.3
+          verbose: false
+          arch: amd64
+          bindir: "/usr/local/bin"
+          installrootdir: "/usr/local"
+          rootdir: ""
+          workdir: ""
+      - run: |
+          aws --version
+          terraform --version
