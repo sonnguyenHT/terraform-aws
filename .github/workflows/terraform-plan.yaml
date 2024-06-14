@@ -7,7 +7,6 @@ on:
       - "**/README.md"
       - "*.png"
       - "**/.gitignore"
-      - "**/.github/**"
   pull_request:
     branches:
       - main
@@ -15,7 +14,6 @@ on:
       - "**/README.md"
       - "*.png"
       - "**/.gitignore"
-      - "**/.github/**"
 jobs:
   preCommitValidation:
     name: Pre Commit Validation
